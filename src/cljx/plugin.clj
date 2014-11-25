@@ -2,7 +2,7 @@
   (:require [clojure.java.io :as io]))
 
 (def ^:private cljx-version
-  (-> (io/resource "META-INF/leiningen/com.keminglabs/cljx/project.clj")
+  (-> (io/resource "META-INF/leiningen/com.taoensso.forks/cljx/project.clj")
        slurp
        read-string
        (nth 2)))
@@ -16,7 +16,7 @@
   (-> project
       (update-in [:dependencies]
                  (fnil into [])
-                 [['com.keminglabs/cljx cljx-version]])
+                 [['com.taoensso.forks/cljx cljx-version]])
       (update-in [:repl-options :nrepl-middleware]
                  (fnil into [])
                  '[cljx.repl-middleware/wrap-cljx cemerick.piggieback/wrap-cljs-repl])))
