@@ -5,8 +5,9 @@
             :url "http://www.opensource.org/licenses/BSD-3-Clause"}
 
   :dependencies [[org.clojure/clojure "1.5.1"]
-                 [org.clojure/core.match "0.2.0"]
-                 [org.clojars.trptcolin/sjacket "0.1.0.6"]
+                 [org.clojure/core.match "0.2.2"]
+                 [org.clojars.trptcolin/sjacket "0.1.4"
+                  :exclusions [org.clojure/clojure]]
                  [com.cemerick/piggieback "0.1.3"]
                  [watchtower "0.1.1"]]
 
